@@ -10,7 +10,7 @@ public class AlphaRobot extends AbstractRobot{
 
 
     //////////////////  CONSTRUCTORS  //////////////////
-//    protected AlphaRobot(){}
+    protected AlphaRobot(){}
 
     protected AlphaRobot(String name, String model) {
         setName(name);
@@ -41,9 +41,9 @@ public class AlphaRobot extends AbstractRobot{
         else this.y = y;
     }
 
-    public void setCharge(int charge) {
-    }
+    public void setCharge(int charge) {}
 
+    
     //////////////////  GETTERS  //////////////////
     public String getName() {
         return name;
@@ -108,15 +108,19 @@ public class AlphaRobot extends AbstractRobot{
             case "down":
                 if (y < 100) return true;
                 printMovingErr(direction); return false;
+            
             case "up":
                 if (y > 0) return true;
                 printMovingErr(direction); return false;
+            
             case "right":
                 if (x < 100) return true;
                 printMovingErr(direction); return false;
+            
             case "left":
                 if (x > 0) return true;
                 printMovingErr(direction); return false;
+            
             default:
                 return false;
         }
