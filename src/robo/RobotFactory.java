@@ -18,7 +18,6 @@ public class RobotFactory {
                 System.err.println("Unfortunately we don't have such a model!\n" +
                                    "Please, use one of these: Alpha, Beta, Charlie!");
                 return null;
-
         }
     }
 }
