@@ -34,7 +34,7 @@ public class BetaRobot extends AlphaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveLeft() {
@@ -42,7 +42,7 @@ public class BetaRobot extends AlphaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveDown() {
@@ -58,7 +58,7 @@ public class BetaRobot extends AlphaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveDownRight() {
@@ -83,13 +83,10 @@ public class BetaRobot extends AlphaRobot {
     }
 
     protected boolean checkCharge(){
-        if (charge < 5) {printLowCharge(); return false;}
-        else return true;
-    }
-
-
-    // Error Templates
-    protected void printLowCharge(){
-        System.err.println("Low battery! Please charge up the robot!");
+        if (charge < 5) {
+            System.err.println("Low battery! Please charge up the robot!"); 
+            return false;
+        }
+        return true;
     }
 }
