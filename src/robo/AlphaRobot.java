@@ -78,12 +78,12 @@ public class AlphaRobot extends AbstractRobot{
     }
 
     public boolean moveDown() {
-        if (checkAxis("down")) {setX(getY() + 1); return true;}
+        if (checkAxis("down")) {setY(getY() + 1); return true;}
         return false;
     }
 
     public boolean moveUp() {
-        if (checkAxis("up")) {setX(getY() - 1); return true;}
+        if (checkAxis("up")) {setY(getY() - 1); return true;}
         return false;
     }
 

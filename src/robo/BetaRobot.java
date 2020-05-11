@@ -8,8 +8,6 @@ public class BetaRobot extends AlphaRobot {
 
 
     //////////////////  CONSTRUCTORS //////////////////
-//    protected BetaRobot() {}
-
     protected BetaRobot(String name, String model) {
         super(name, model);
         setCharge(0);
@@ -52,7 +50,7 @@ public class BetaRobot extends AlphaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveUp() {
