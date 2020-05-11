@@ -16,7 +16,7 @@ public class CharlieRobot extends BetaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveUpRight(){
@@ -26,7 +26,7 @@ public class CharlieRobot extends BetaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveDownLeft(){
@@ -36,7 +36,7 @@ public class CharlieRobot extends BetaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 
     public boolean moveUpLeft(){
@@ -46,6 +46,6 @@ public class CharlieRobot extends BetaRobot {
             checkMove();
             return true;
         }
-        else return false;
+        return false;
     }
 }
