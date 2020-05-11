@@ -4,7 +4,7 @@ public class BetaRobot extends AlphaRobot {
 
     // Properties
     protected byte charge;
-    protected byte moves = 1;
+    protected byte moves = 0;
 
 
     //////////////////  CONSTRUCTORS //////////////////
@@ -78,7 +78,7 @@ public class BetaRobot extends AlphaRobot {
     }
 
     protected void checkMove(){
-        if (moves % 2 == 0) charge -= 1;
+        if (moves % 2 != 0 && moves != 0) charge -= 1;
         moves++;
     }
 
