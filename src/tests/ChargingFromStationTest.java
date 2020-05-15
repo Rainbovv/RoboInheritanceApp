@@ -9,6 +9,7 @@ public class ChargingFromStationTest {
         int percentage = 0;
 
         
+        // Checking charging on different coords
         station.setX(10);
         station.setY(10);
         station.setCharge(100);
@@ -24,6 +25,7 @@ public class ChargingFromStationTest {
         percentage += 33;
 
         
+        // Checking charging
         chargeable.setY(10);
         chargeable.setX(10);
 
@@ -35,6 +37,7 @@ public class ChargingFromStationTest {
         percentage += 33;
 
         
+        // Checking charging on 100%
         if (station.charge(chargeable)){
             System.err.println("Charging from station test failed\nREASON: The station is charging an"+
                                "object with a full battery");
