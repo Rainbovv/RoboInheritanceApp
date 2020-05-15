@@ -52,8 +52,7 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
         if (checkCoords((Has2DCoordinatesInterface)chargeable) && checkCharge() && checkObjectsCharge(chargeable)){
 
             while (chargeable.getCharge() < 100) {
-                chargeable.setCharge(chargeable.getCharge() + 1);
-                chargeDivider++;
+                chargeable.setCharge(chargeable.getCharge() + 1); 
                 divideCharge();
             }
             return true;
@@ -71,7 +70,7 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
 
     private boolean checkCoords(Has2DCoordinatesInterface chargeable){
         if ( chargeable.getX() != this.getX() || chargeable.getY() != this.getY()){
-            printCharchingCoordsErr();
+            printChargingCoordsErr();
             return false;
         }
         return true;
@@ -86,8 +85,8 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
     }
 
     private void divideCharge(){
-        if (chargeDivider == 10){
-            chargeDivider = 0;
+        chargeDivider++;
+        if (chargeDivider % 10 == 0){
             charge -= 1;}
     }
 
@@ -96,7 +95,7 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
         System.err.println("Low battery! Please charge up the " + type + "!");
     }
 
-    public void printCharchingCoordsErr(){
+    public void printChargingCoordsErr(){
         System.err.println("The object is not on the same coordinates as station");
     }
 
