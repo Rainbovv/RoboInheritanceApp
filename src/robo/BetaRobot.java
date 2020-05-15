@@ -84,7 +84,7 @@ public class BetaRobot extends AlphaRobot {
 
     protected boolean checkCharge(){
         if (charge < 5) {
-            printLowBattery("robot");
+            printLowBattery();
             return false;
         }
         return true;
@@ -96,8 +96,8 @@ public class BetaRobot extends AlphaRobot {
         System.err.println("The robot cannot move " + direction + "! It's on the boundary!");
     }
 
-    public void printLowBattery(String type){
-        System.err.println("Low battery! Please charge up the " + type + "!");
+    public void printLowBattery(){
+        System.err.println("Low battery! Please charge up the robot!");
     }
 
     public void printBatteryVolumeErr() {
