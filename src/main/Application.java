@@ -1,8 +1,7 @@
 package main;
 
 import robo.*;
-import station.ChargingStation;
-import station.StationFactory;
+import station.*;
 import tests.*;
 
 public class Application {
