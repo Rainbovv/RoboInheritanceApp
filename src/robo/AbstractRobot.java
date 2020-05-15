@@ -1,5 +1,7 @@
 package robo;
 
+import interfaces.*;
+
 public abstract class AbstractRobot implements Has2DCoordinatesInterface, Moveable2DInterface, HasBatteryInterface {
 
     // Setters

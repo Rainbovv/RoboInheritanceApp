@@ -16,8 +16,8 @@ public class BetaRobot extends AlphaRobot {
 
     //////////////////  SETTERS  //////////////////
     public void setCharge(int charge) {
-        if (charge < 0 || charge > 100) System.err.println("You have used a non valid value! " +
-                                                           "Use on from the range - [0 - 100]");
+        if (charge < 0 || charge > 100) printBatteryVolumeErr();
+
         else this.charge = (byte)charge;
     }
 
@@ -84,9 +84,24 @@ public class BetaRobot extends AlphaRobot {
 
     protected boolean checkCharge(){
         if (charge < 5) {
-            System.err.println("Low battery! Please charge up the robot!"); 
+            printLowBattery("robot");
             return false;
         }
         return true;
+    }
+
+
+    // Errors
+    public void printMovingErr(String direction) {
+        System.err.println("The robot cannot move " + direction + "! It's on the boundary!");
+    }
+
+    public void printLowBattery(String type){
+        System.err.println("Low battery! Please charge up the " + type + "!");
+    }
+
+    public void printBatteryVolumeErr() {
+        System.err.println("You have used a non valid value! " +
+                           "Use on from the range - [0 - 100]");
     }
 }

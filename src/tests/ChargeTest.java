@@ -3,7 +3,7 @@ package tests;
 import robo.*;
 
 public class ChargeTest {
-    public static int testCharge(AbstractRobot robot) {
+    public static int runTest(AbstractRobot robot) {
         int percentage = 0;
 
 

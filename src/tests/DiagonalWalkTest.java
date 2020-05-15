@@ -3,7 +3,7 @@ package tests;
 import robo.AbstractRobot;
 
 public class DiagonalWalkTest {
-    public static int testDiagonalWalking(AbstractRobot robot){
+    public static int runTest(AbstractRobot robot){
         int percentage = 0;
         robot.setCharge(10);
 

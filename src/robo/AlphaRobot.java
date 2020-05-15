@@ -126,19 +126,18 @@ public class AlphaRobot extends AbstractRobot{
         }
     }
 
-
-    // Error Templates
-    protected void printNameModelErr(String property) {
+    // Errors
+    public void printNameModelErr(String property) {
         System.err.println("You cannot use null for the property \"" + property +
                            "\"! Please use a valid value!");
     }
 
-    protected void printCoordsErr(String coord){
+    public void printCoordsErr(String coord){
         System.err.println("You cannot use this coordinate on the " + coord +
                            "-axis! Please use one from the range [0 - 100]");
     }
 
-    protected void printMovingErr(String direction) {
+    public void printMovingErr(String direction) {
         System.err.println("The robot cannot move " + direction + "! It's on the boundary!");
     }
 }

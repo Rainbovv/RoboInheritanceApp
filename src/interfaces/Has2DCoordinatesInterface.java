@@ -1,4 +1,4 @@
-package robo;
+package interfaces;
 
 public interface Has2DCoordinatesInterface {
 
