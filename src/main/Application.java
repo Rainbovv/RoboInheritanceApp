@@ -9,8 +9,8 @@ public class Application {
     public static void main(String[] args){
 
         AbstractRobot robot = RobotFactory.getRobot("Beta", "R2D2");
-
-        ChargingStation station = StationFactory.getStation(0,0,0);
+        ChargingStation station = StationFactory.getStation(0, 0, 0);
+        
         System.out.printf("Charging from station test passed %d%%\n",
                            ChargingFromStationTest.runTest(station, robot));
 
