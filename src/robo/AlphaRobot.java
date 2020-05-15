@@ -132,8 +132,8 @@ public class AlphaRobot extends AbstractRobot{
                            "\"! Please use a valid value!");
     }
 
-    public void printCoordsErr(String coord){
-        System.err.println("You cannot use this coordinate on the " + coord +
+    public void printCoordsErr(String axis){
+        System.err.println("You cannot use this coordinate on the " + axis +
                            "-axis! Please use one from the range [0 - 100]");
     }
 
