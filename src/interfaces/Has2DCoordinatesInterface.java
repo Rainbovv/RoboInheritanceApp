@@ -9,5 +9,4 @@ public interface Has2DCoordinatesInterface {
     // Getters
     int getX();
     int getY();
-
 }
