@@ -62,7 +62,7 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
 
     private boolean checkCharge(){
         if (charge < 5) {
-            printLowBattery("station");
+            printLowBattery();
             return false;
         }
         return true;
@@ -91,8 +91,8 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
     }
 
     // Errors
-    public void printLowBattery(String type){
-        System.err.println("Low battery! Please charge up the " + type + "!");
+    public void printLowBattery(){
+        System.err.println("Low battery! Please charge up the station!");
     }
 
     public void printChargingCoordsErr(){
@@ -108,8 +108,8 @@ public class ChargingStation implements Has2DCoordinatesInterface, HasBatteryInt
                            "Use on from the range - [0 - 100]");
     }
 
-    public void printCoordsErr(String coord){
-        System.err.println("You cannot use this coordinate on the " + coord +
+    public void printCoordsErr(String axis){
+        System.err.println("You cannot use this coordinate on the " + axis +
                            "-axis! Please use one from the range [0 - 100]");
     }
 }
